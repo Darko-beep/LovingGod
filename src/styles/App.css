@@ -832,8 +832,7 @@
   }
 
 
-  // CSS Styles
-const styles = `
+/* Gallery Page Styles */
 .page.gallery {
   padding: 2rem;
   max-width: 1200px;
