@@ -1,0 +1,442 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+  }
+  
+  .layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  nav {
+    background-color: #2c3e50;
+    padding: 1rem;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    background-color: #EED6D3;
+  }
+  
+  main {
+    flex: 1;
+    padding: 2rem;
+  }
+  
+  .page {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+  }
+
+
+  /* Home Page Styles */
+.hero {
+    text-align: center;
+    padding: 3rem 1rem;
+    background-color: #A49393;
+    color: white;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    background-color: #e74c3c;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .cta-button:hover {
+    background-color: #c0392b;
+  }
+  
+  .recent-content {
+    margin-top: 2rem;
+  }
+  
+  .content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  
+  .content-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .content-card h3 {
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+  }
+
+  /* About Page Styles */
+.about {
+    max-width: 800px;
+  }
+  
+  .bio {
+    display: flex;
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+  
+  .bio-content {
+    flex: 2;
+  }
+  
+  .bio-image {
+    flex: 1;
+  }
+  
+  .placeholder-image {
+    width: 100%;
+    height: 200px;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+  }
+  
+  .skills-list {
+    margin-top: 1rem;
+    list-style-position: inside;
+  }
+  
+  .skills-list li {
+    margin-bottom: 0.5rem;
+  }
+
+
+  /* Services Page Styles */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .service-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .service-card h3 {
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+  }
+  
+  .price {
+    margin: 1rem 0;
+    font-weight: bold;
+    color: #27ae60;
+  }
+  
+  .inquiry-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: flex-start;
+    margin-top: auto;
+    transition: background-color 0.3s;
+  }
+  
+  .inquiry-button:hover {
+    background-color: #2980b9;
+  }
+
+
+  /* Blog Page Styles */
+.blog-posts {
+    margin-top: 2rem;
+  }
+  
+  .post-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 1.5rem;
+  }
+  
+  .post-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+  }
+  
+  .post-category {
+    font-weight: bold;
+  }
+  
+  .post-card h3 {
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+  }
+  
+  .post-excerpt {
+    margin-bottom: 1rem;
+  }
+  
+  .read-more {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .read-more:hover {
+    text-decoration: underline;
+  }
+
+
+  /* Bible Studies Page Styles */
+.studies-list {
+    margin-top: 2rem;
+  }
+  
+  .study-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 1.5rem;
+  }
+  
+  .study-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .study-level {
+    background-color: #e74c3c;
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+  }
+  
+  .study-description {
+    margin-bottom: 1rem;
+  }
+  
+  .study-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .study-button {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .study-button:hover {
+    background-color: #219653;
+  }
+
+
+  /* Gallery Page Styles */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .gallery-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
+  }
+  
+  .gallery-image-placeholder {
+    height: 200px;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .gallery-image-placeholder span {
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+  }
+  
+  .gallery-info {
+    padding: 1rem;
+  }
+  
+  .gallery-info h3 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .view-album {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: background-color 0.3s;
+  }
+  
+  .view-album:hover {
+    background-color: #2980b9;
+  }
+
+  /* Contact Form Styles */
+.contact-form {
+    max-width: 600px;
+    margin: 2rem auto;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+  }
+  
+  .form-group textarea {
+    min-height: 150px;
+  }
+  
+  .submit-button {
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-button:hover {
+    background-color: #1a252f;
+  }
+  
+  .form-success {
+    text-align: center;
+    padding: 2rem;
+    background-color: #27ae60;
+    color: white;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 2rem auto;
+  }
+
+
+  /* Dark Mode Styles */
+.dark {
+    --bg-color: #1a1a1a;
+    --text-color: #f0f0f0;
+    --nav-color: #0d0d0d;
+    --card-bg: #2d2d2d;
+  }
+  
+  .dark body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+  
+  .dark nav,
+  .dark footer {
+    background-color: var(--nav-color);
+  }
+  
+  .dark .content-card,
+  .dark .service-card,
+  .dark .post-card,
+  .dark .study-card,
+  .dark .gallery-card {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+  }
+  
+  .dark .post-card h3,
+  .dark .service-card h3,
+  .dark .study-card h3 {
+    color: var(--text-color);
+  }
+  
+  .dark .theme-toggle {
+    background-color: #444;
+    color: white;
+  }
