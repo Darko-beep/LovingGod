@@ -1,32 +1,42 @@
-import {Outlet, Link } from 'react-router-dom';
+import { useState } from 'react';
+import { Outlet, Link } from 'react-router-dom';
 import ThemeToggle from './ThemeToggle';
 
-const Layout = () =>{
-    return(
+const Layout = () => {
+    const [menuOpen, setMenuOpen] = useState(false);
+    
+    const toggleMenu = () => {
+        setMenuOpen(prev => !prev);
+    };
+    
+    return (
         <div className="layout">
             <nav>
-                <ul className= "nav-links" >
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/about">About</Link></li>
-                    <li><Link to="/services">Services</Link></li>
-                    <li><Link to="/blog">Blog</Link></li>
-                    <li><Link to="/bible-studies">Bible Studies</Link></li>
-                    <li><Link to="/gallery">Gallery</Link></li>
-                    <li><ThemeToggle /></li>
-                </ul>
-
+                <div className="nav-container">
+                    <button className="menu-toggle" onClick={toggleMenu}>
+                        ☰
+                    </button>
+                    
+                    <ul className={`nav-links ${menuOpen ? 'active' : ''}`}>
+                        <li><Link to="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
+                        <li><Link to="/about" onClick={() => setMenuOpen(false)}>About</Link></li>
+                        <li><Link to="/services" onClick={() => setMenuOpen(false)}>Services</Link></li>
+                        <li><Link to="/blog" onClick={() => setMenuOpen(false)}>Blog</Link></li>
+                        <li><Link to="/bible-studies" onClick={() => setMenuOpen(false)}>Bible Studies</Link></li>
+                        <li><Link to="/gallery" onClick={() => setMenuOpen(false)}>Gallery</Link></li>
+                    </ul>
+                    
+                    <ThemeToggle />
+                </div>
             </nav>
 
-
             <main>
-                <Outlet/>
+                <Outlet />
             </main>
 
             <footer>
                 <p>© {new Date().getFullYear()} <i>Loving God</i> </p>
             </footer>
-
-
         </div>
     );
 };

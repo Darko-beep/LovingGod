@@ -1,5 +1,7 @@
 
 import AnimatedPage from '../components/AnimatedPage';
+import ContactForm from '../components/ContactForm';
+
 const About = () => {
     return (
       <AnimatedPage>
@@ -27,7 +29,8 @@ const About = () => {
                         </ul>
                 </section>
 
-            
+                <ContactForm />
+
         </div>
       </AnimatedPage>
     );
