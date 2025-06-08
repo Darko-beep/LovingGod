@@ -3,9 +3,9 @@ import AnimatedPage from '../components/AnimatedPage';
 const blogPosts = [
   {
     id: 1,
-    title: "Getting Started with React Hooks",
-    date: "May 15, 2023",
-    excerpt: "Learn how to use React Hooks to simplify your functional components and manage state without writing classes.",
+    title: "My thoughts about marriage",
+    date: "May 20, 2025",
+    excerpt: "Marriage is accepting to live with a person biblically. It is a journey that totally requires GOD, and His Ways Genesis <b><i>2:18, 21-24</i></b>",
     category: "Web Development",
     readTime: "5 min read",
     image: "https://source.unsplash.com/random/600x400/?react,javascript"
@@ -13,7 +13,7 @@ const blogPosts = [
   {
     id: 2,
     title: "The Importance of Daily Devotion",
-    date: "April 28, 2023",
+    date: "April 28, 2025",
     excerpt: "How establishing a daily devotional practice transformed my spiritual life and brought me closer to God.",
     category: "Faith",
     readTime: "8 min read",
@@ -21,8 +21,8 @@ const blogPosts = [
   },
   {
     id: 3,
-    title: "Modern CSS Techniques You Should Know",
-    date: "June 2, 2023",
+    title: "MARRIAGE (part 2)",
+    date: "May 24, 2025",
     excerpt: "Explore powerful CSS features like Grid, Flexbox, and custom properties that will elevate your styling game.",
     category: "Web Development",
     readTime: "7 min read",

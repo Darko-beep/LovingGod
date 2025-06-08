@@ -11,7 +11,12 @@ const About = () => {
                     <div className="bio-content">
                         <h3>My Story</h3>
                         <p>Hello! I'm Ernestina, a passionate Entrepreneur with a love for sharing knowledge and faith.</p>
-                        <p>This website is a space to share Bible studies, blog posts about things I'm learning, and occasionally some services or products I offer.</p>
+                        <p>
+                            I am person who GOD has saved through diverse ways, 
+                            He has empowered me to share my journey of faith with others 
+                            through the Help of the Holy Spirit on this website after many trails, traumas, sorrows, and nightmares. 
+                            I pray that GOD would continue to help me as He has always done in my life in Jesus’ Name..
+                        </p>
                     </div>
                 <div className="bio-image">
                     {/* You can add an image here */}
@@ -22,10 +27,10 @@ const About = () => {
                 <section className="skills-interests">
                     <h3>Skills & Interests</h3>
                         <ul className="skills-list">
-                            <li>Web Development (React, JavaScript)</li>
+                            <li></li>
                             <li>Bible Study and Theology</li>
                             <li>Writing and Teaching</li>
-                            <li>[Add your own interests]</li>
+                            <li></li>
                         </ul>
                 </section>
 

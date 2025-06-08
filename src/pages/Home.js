@@ -7,8 +7,8 @@ const Home = () => {
       <div className="page home">
         <section className="hero">
             <h1>Welcome to <i>Loving God </i>Platform</h1>
-            <p>A place for sharing knowledge, faith, and creativity</p>
-            <Link to="/about" className="cta-button">Learn More About Me</Link>
+            <p>This is a platform full of knowledge and understanding of God's Word</p>
+            <Link to="/about" className="cta-button">Learn more about my jornry as a young christian</Link>
         </section>
         
         <section className="recent-content">

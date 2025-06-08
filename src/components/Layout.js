@@ -20,7 +20,7 @@ const Layout = () => {
                     <ul className={`nav-links ${menuOpen ? 'active' : ''}`}>
                         <li><Link to="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
                         <li><Link to="/about" onClick={() => setMenuOpen(false)}>About</Link></li>
-                        <li><Link to="/services" onClick={() => setMenuOpen(false)}>Services</Link></li>
+                        <li><Link to="/services" onClick={() => setMenuOpen(false)}>Devotional Guide</Link></li>
                         <li><Link to="/blog" onClick={() => setMenuOpen(false)}>Blog</Link></li>
                         <li><Link to="/bible-studies" onClick={() => setMenuOpen(false)}>Bible Studies</Link></li>
                         <li><Link to="/gallery" onClick={() => setMenuOpen(false)}>Gallery</Link></li>
