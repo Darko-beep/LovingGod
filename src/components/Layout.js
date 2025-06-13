@@ -97,3 +97,27 @@ const Layout = () => {
                             <button 
                                 type="submit" 
                                 style={{
+                                    padding: '0.5rem 1rem',
+                                    backgroundColor: '#FFD700',
+                                    color: '#8B4513',
+                                    border: 'none',
+                                    borderRadius: '5px',
+                                    cursor: 'pointer',
+                                    fontWeight: 'bold'
+                                }}
+                            >
+                                Subscribe
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div className="footer-bottom">
+                    <p>© {new Date().getFullYear()} Loving God. All rights reserved. Made with ❤️ and faith.</p>
+                </div>
+            </footer>
+        </div>
+    );
+};
+
+export default Layout;
