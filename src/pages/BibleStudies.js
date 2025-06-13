@@ -231,8 +231,104 @@ const BibleStudies = () => {
           <p>Take our quick assessment to get personalized study recommendations based on your spiritual journey.</p>
           <button className="recommendation-button">Take Assessment</button>
         </div>
+        
+        {/* Bible API Section */}
+        <div className="bible-api-section">
+          <h3>Bible Verse Lookup</h3>
+          <p className="text-center mb-3">Search for any Bible verse or passage</p>
+          
+          <BibleSearch />
+        </div>
       </div>
     </AnimatedPage>
+  );
+};
+
+// Bible Search Component
+const BibleSearch = () => {
+  const [book, setBook] = useState('John');
+  const [chapter, setChapter] = useState('3');
+  const [verse, setVerse] = useState('16');
+  const [verseText, setVerseText] = useState('');
+  const [loading, setLoading] = useState(false);
+  
+  const books = [
+    'Genesis', 'Exodus', 'Leviticus', 'Numbers', 'Deuteronomy',
+    'Joshua', 'Judges', 'Ruth', '1 Samuel', '2 Samuel',
+    '1 Kings', '2 Kings', '1 Chronicles', '2 Chronicles',
+    'Ezra', 'Nehemiah', 'Esther', 'Job', 'Psalms', 'Proverbs',
+    'Ecclesiastes', 'Song of Solomon', 'Isaiah', 'Jeremiah',
+    'Lamentations', 'Ezekiel', 'Daniel', 'Hosea', 'Joel',
+    'Amos', 'Obadiah', 'Jonah', 'Micah', 'Nahum', 'Habakkuk',
+    'Zephaniah', 'Haggai', 'Zechariah', 'Malachi',
+    'Matthew', 'Mark', 'Luke', 'John', 'Acts', 'Romans',
+    '1 Corinthians', '2 Corinthians', 'Galatians', 'Ephesians',
+    'Philippians', 'Colossians', '1 Thessalonians', '2 Thessalonians',
+    '1 Timothy', '2 Timothy', 'Titus', 'Philemon', 'Hebrews',
+    'James', '1 Peter', '2 Peter', '1 John', '2 John', '3 John',
+    'Jude', 'Revelation'
+  ];
+  
+  const handleSearch = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    
+    // Simulated API response - in production, you would call a real Bible API
+    setTimeout(() => {
+      if (book === 'John' && chapter === '3' && verse === '16') {
+        setVerseText('For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life.');
+      } else if (book === 'Psalms' && chapter === '23' && verse === '1') {
+        setVerseText('The Lord is my shepherd, I lack nothing.');
+      } else {
+        setVerseText(`${book} ${chapter}:${verse} - "This is a placeholder for the verse text. In production, this would fetch from a Bible API."`);
+      }
+      setLoading(false);
+    }, 1000);
+  };
+  
+  return (
+    <>
+      <form onSubmit={handleSearch} className="bible-search-form">
+        <select 
+          value={book} 
+          onChange={(e) => setBook(e.target.value)}
+          className="bible-select"
+        >
+          {books.map(b => (
+            <option key={b} value={b}>{b}</option>
+          ))}
+        </select>
+        
+        <input 
+          type="number" 
+          placeholder="Chapter" 
+          value={chapter}
+          onChange={(e) => setChapter(e.target.value)}
+          min="1"
+          className="bible-input"
+        />
+        
+        <input 
+          type="number" 
+          placeholder="Verse" 
+          value={verse}
+          onChange={(e) => setVerse(e.target.value)}
+          min="1"
+          className="bible-input"
+        />
+        
+        <button type="submit" className="search-bible-btn">
+          {loading ? 'Searching...' : 'Search'}
+        </button>
+      </form>
+      
+      {verseText && (
+        <div className="bible-verse-display">
+          <h4>{book} {chapter}:{verse}</h4>
+          <p>{verseText}</p>
+        </div>
+      )}
+    </>
   );
 };
 
